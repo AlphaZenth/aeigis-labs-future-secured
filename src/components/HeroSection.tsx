@@ -71,7 +71,7 @@ export default function HeroSection() {
           AI-powered blockchain defense infrastructure for Ethereum, Layer 2 ecosystems, DeFi protocols, smart contracts, and next-generation Web3 applications.
         </p>
 
-        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up" style={{ animationDelay: "0.7s" }}>
+        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up" style={{ animationDelay: "0.5s" }}>
           <a href="#technology" className="neon-btn rounded-xl px-8 py-4 text-sm tracking-wider">
             Explore Technology
           </a>
