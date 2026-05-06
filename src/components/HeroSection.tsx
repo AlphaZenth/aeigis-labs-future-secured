@@ -1,7 +1,5 @@
-import { motion } from "framer-motion";
 import { useState, useRef, useEffect } from "react";
 import heroBg from "@/assets/aeigis-hero-bg.jpg";
-import ScrollReveal from "./ScrollReveal";
 
 function Counter({ end, suffix = "", label }: { end: number; suffix?: string; label: string }) {
   const [count, setCount] = useState(0);
@@ -58,59 +56,37 @@ export default function HeroSection() {
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-neon/10 blur-[120px] pointer-events-none" />
 
       <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pt-32 pb-20 text-center">
-        <motion.div
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          className="inline-flex items-center gap-2 glass-panel rounded-full px-5 py-2 mb-8"
-        >
+        <div className="inline-flex items-center gap-2 glass-panel rounded-full px-5 py-2 mb-8 animate-fade-up" style={{ animationDelay: "0.1s" }}>
           <span className="h-2 w-2 rounded-full bg-neon animate-pulse" />
           <span className="text-xs tracking-wider text-muted-foreground uppercase">AI-Powered Ethereum Security Infrastructure</span>
-        </motion.div>
+        </div>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[0.95] tracking-tight"
-        >
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[0.95] tracking-tight animate-fade-up" style={{ animationDelay: "0.3s" }}>
           Securing The
           <br />
           <span className="neon-text">Ethereum Future</span>
-        </motion.h1>
+        </h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-6 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed"
-        >
+        <p className="mt-6 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed animate-fade-up" style={{ animationDelay: "0.5s" }}>
           AI-powered blockchain defense infrastructure for Ethereum, Layer 2 ecosystems, DeFi protocols, smart contracts, and next-generation Web3 applications.
-        </motion.p>
+        </p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
-        >
+        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up" style={{ animationDelay: "0.7s" }}>
           <a href="#technology" className="neon-btn rounded-xl px-8 py-4 text-sm tracking-wider">
             Explore Technology
           </a>
           <a href="#dashboard" className="neon-btn-outline rounded-xl px-8 py-4 text-sm tracking-wider">
             Launch Dashboard
           </a>
-        </motion.div>
+        </div>
 
-        <ScrollReveal delay={0.3}>
-          <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6">
-            {metrics.map((m) => (
-              <div key={m.label} className="glass-panel rounded-xl p-4">
-                <Counter {...m} />
-              </div>
-            ))}
-          </div>
-        </ScrollReveal>
+        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 animate-fade-up" style={{ animationDelay: "0.9s" }}>
+          {metrics.map((m) => (
+            <div key={m.label} className="glass-panel rounded-xl p-4">
+              <Counter {...m} />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
