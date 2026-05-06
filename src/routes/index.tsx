@@ -15,7 +15,6 @@ import Footer from "@/components/Footer";
 import ParticleField from "@/components/ParticleField";
 
 export const Route = createFileRoute("/")({
-  ssr: false,
   component: Index,
   head: () => ({
     meta: [
