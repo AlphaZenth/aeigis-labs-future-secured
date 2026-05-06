@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import logoImg from "@/assets/aeigis-logo.jpg";
 
 const navItems = [
@@ -24,10 +23,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
+    <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled ? "glass-panel shadow-lg shadow-glow/10" : "bg-transparent"
       }`}
@@ -78,33 +74,26 @@ export default function Navbar() {
         </div>
       </div>
 
-      <AnimatePresence>
-        {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden glass-panel border-t border-border"
-          >
-            <div className="px-4 py-6 space-y-2">
-              {navItems.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  onClick={() => setMobileOpen(false)}
-                  className="block px-4 py-3 text-sm text-muted-foreground hover:text-neon rounded-lg hover:bg-accent transition-colors"
-                >
-                  {item.label}
-                </a>
-              ))}
-              <div className="flex flex-col gap-2 pt-4">
-                <a href="#contact" className="neon-btn-outline rounded-lg px-5 py-3 text-sm text-center">Contact Team</a>
-                <a href="#dashboard" className="neon-btn rounded-lg px-5 py-3 text-sm text-center">Launch App</a>
-              </div>
+      {mobileOpen && (
+        <div className="lg:hidden glass-panel border-t border-border">
+          <div className="px-4 py-6 space-y-2">
+            {navItems.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                onClick={() => setMobileOpen(false)}
+                className="block px-4 py-3 text-sm text-muted-foreground hover:text-neon rounded-lg hover:bg-accent transition-colors"
+              >
+                {item.label}
+              </a>
+            ))}
+            <div className="flex flex-col gap-2 pt-4">
+              <a href="#contact" className="neon-btn-outline rounded-lg px-5 py-3 text-sm text-center">Contact Team</a>
+              <a href="#dashboard" className="neon-btn rounded-lg px-5 py-3 text-sm text-center">Launch App</a>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.nav>
+          </div>
+        </div>
+      )}
+    </nav>
   );
 }
