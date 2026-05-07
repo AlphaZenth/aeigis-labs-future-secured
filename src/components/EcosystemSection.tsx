@@ -1,14 +1,22 @@
 import ScrollReveal from "./ScrollReveal";
+import ethereumLogo from "@/assets/chains/ethereum.png";
+import arbitrumLogo from "@/assets/chains/arbitrum.png";
+import optimismLogo from "@/assets/chains/optimism.png";
+import baseLogo from "@/assets/chains/base.png";
+import polygonLogo from "@/assets/chains/polygon.png";
+import zksyncLogo from "@/assets/chains/zksync.png";
+import scrollLogo from "@/assets/chains/scroll.png";
+import lineaLogo from "@/assets/chains/linea.png";
 
 const chains = [
-  { name: "Ethereum", color: "from-[#627EEA] to-[#627EEA]/60" },
-  { name: "Arbitrum", color: "from-[#28A0F0] to-[#28A0F0]/60" },
-  { name: "Optimism", color: "from-[#FF0420] to-[#FF0420]/60" },
-  { name: "Base", color: "from-[#0052FF] to-[#0052FF]/60" },
-  { name: "Polygon", color: "from-[#8247E5] to-[#8247E5]/60" },
-  { name: "zkSync", color: "from-[#4E529A] to-[#4E529A]/60" },
-  { name: "Scroll", color: "from-[#FFEEDA] to-[#FFEEDA]/60" },
-  { name: "Linea", color: "from-[#61DFFF] to-[#61DFFF]/60" },
+  { name: "Ethereum", logo: ethereumLogo },
+  { name: "Arbitrum", logo: arbitrumLogo },
+  { name: "Optimism", logo: optimismLogo },
+  { name: "Base", logo: baseLogo },
+  { name: "Polygon", logo: polygonLogo },
+  { name: "zkSync", logo: zksyncLogo },
+  { name: "Scroll", logo: scrollLogo },
+  { name: "Linea", logo: lineaLogo },
 ];
 
 export default function EcosystemSection() {
@@ -29,8 +37,8 @@ export default function EcosystemSection() {
           {chains.map((c, i) => (
             <ScrollReveal key={c.name} delay={i * 0.06}>
               <div className="glow-card rounded-2xl p-6 text-center group cursor-default">
-                <div className={`h-14 w-14 rounded-full bg-gradient-to-br ${c.color} mx-auto mb-4 flex items-center justify-center text-foreground font-bold text-lg opacity-80 group-hover:opacity-100 transition-opacity`}>
-                  {c.name[0]}
+                <div className="h-14 w-14 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
+                  <img src={c.logo} alt={`${c.name} logo`} loading="lazy" width={48} height={48} className="w-12 h-12 object-contain" />
                 </div>
                 <h3 className="text-sm font-semibold text-foreground">{c.name}</h3>
                 <div className="mt-2 h-1 w-8 mx-auto rounded-full bg-neon/30 group-hover:bg-neon/60 transition-colors" />
