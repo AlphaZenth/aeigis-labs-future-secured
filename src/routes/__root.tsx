@@ -29,14 +29,14 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Aeigis Labs — Ethereum & AI Security Infrastructure" },
-      { name: "description", content: "AI-powered Ethereum security infrastructure, smart contract defense, and quantum-resistant Web3 cybersecurity." },
-      { name: "author", content: "Aeigis Labs" },
-      { property: "og:title", content: "Aeigis Labs" },
-      { property: "og:description", content: "Securing The Ethereum Future" },
+      { title: "Aegis Labs — Web3 Security Infrastructure" },
+      { name: "description", content: "Scan Before You Trust. Protect Before You Connect. AI-powered Web3 security infrastructure by Aegis Labs." },
+      { name: "author", content: "Aegis Labs" },
+      { property: "og:title", content: "Aegis Labs" },
+      { property: "og:description", content: "Scan Before You Trust. Protect Before You Connect." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:site", content: "@AegisLabsEth" },
     ],
     links: [
       {
