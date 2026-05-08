@@ -5,7 +5,7 @@ const items = [
   { icon: Eye, title: "AI Threat Detection", desc: "Machine learning models analyzing blockchain transactions in real-time" },
   { icon: Shield, title: "Smart Contract Defense", desc: "Automated vulnerability scanning and exploit prevention systems" },
   { icon: Lock, title: "Quantum-Resistant Encryption", desc: "Post-quantum cryptographic protocols for future-proof security" },
-  { icon: Activity, title: "Real-Time Monitoring", desc: "24/7 automated surveillance across all Ethereum networks" },
+  { icon: Activity, title: "Real-Time Monitoring", desc: "24/7 automated surveillance across all Web3 networks" },
   { icon: Globe, title: "Cross-Chain Security", desc: "Unified protection across L1, L2, and cross-chain bridges" },
   { icon: Zap, title: "Autonomous Response", desc: "AI-driven incident response with zero human intervention delay" },
 ];

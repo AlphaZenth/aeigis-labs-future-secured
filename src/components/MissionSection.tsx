@@ -18,7 +18,7 @@ export default function MissionSection() {
             <span className="neon-text">Decentralized Future</span>
           </h2>
           <p className="mt-6 text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            We believe that true decentralization requires a security-first foundation. Aeigis Labs is committed to creating institutional-grade, future-proof infrastructure that protects every layer of the Ethereum ecosystem — from validators to end users.
+            We believe that true decentralization requires a security-first foundation. Aegis Labs is committed to creating institutional-grade, future-proof infrastructure that protects every layer of the Web3 ecosystem — from validators to end users.
           </p>
         </ScrollReveal>
 
