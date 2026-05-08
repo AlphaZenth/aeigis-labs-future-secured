@@ -53,7 +53,7 @@ function ContactPage() {
             </ScrollReveal>
             <ScrollReveal delay={0.3}>
               <a href="https://github.com/AegisLabs-Security" target="_blank" rel="noopener noreferrer" className="glow-card rounded-2xl p-6 text-center group block">
-                <Github className="h-8 w-8 text-neon mx-auto mb-3" />
+                <Code2 className="h-8 w-8 text-neon mx-auto mb-3" />
                 <h3 className="text-sm font-semibold text-foreground group-hover:text-neon transition-colors">GitHub</h3>
                 <p className="text-xs text-muted-foreground mt-1">AegisLabs-Security</p>
               </a>
