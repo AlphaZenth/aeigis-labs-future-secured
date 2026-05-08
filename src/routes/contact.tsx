@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ParticleField from "@/components/ParticleField";
 import ScrollReveal from "@/components/ScrollReveal";
-import { Mail, MessageSquare, Github } from "lucide-react";
+import { Mail, MessageSquare, Code2 } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({
   component: ContactPage,
