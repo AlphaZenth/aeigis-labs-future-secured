@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { Link } from "@tanstack/react-router";
 import heroBg from "@/assets/aeigis-hero-bg.jpg";
 
 function Counter({ end, suffix = "", label }: { end: number; suffix?: string; label: string }) {
@@ -39,14 +40,14 @@ function Counter({ end, suffix = "", label }: { end: number; suffix?: string; la
 
 const metrics = [
   { end: 500, suffix: "M+", label: "Transactions Protected" },
-  { end: 1200, suffix: "+", label: "Contracts Secured" },
+  { end: 1200, suffix: "+", label: "Contracts Scanned" },
   { end: 99, suffix: ".99%", label: "System Uptime" },
   { end: 24, suffix: "/7", label: "AI Monitoring" },
 ];
 
 export default function HeroSection() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
         <img src={heroBg} alt="" className="w-full h-full object-cover opacity-50" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/70 to-background" />
@@ -58,26 +59,29 @@ export default function HeroSection() {
       <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pt-32 pb-20 text-center">
         <div className="inline-flex items-center gap-2 glass-panel rounded-full px-5 py-2 mb-8 animate-fade-up" style={{ animationDelay: "0.1s" }}>
           <span className="h-2 w-2 rounded-full bg-neon animate-pulse" />
-          <span className="text-xs tracking-wider text-muted-foreground uppercase">AI-Powered Ethereum Security Infrastructure</span>
+          <span className="text-xs tracking-wider text-muted-foreground uppercase">Aegis Shield — AI-Powered Web3 Security</span>
         </div>
 
         <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[0.95] tracking-tight animate-fade-up" style={{ animationDelay: "0.3s" }}>
-          Securing The
+          Scan Before You Trust.
           <br />
-          <span className="neon-text">Ethereum Future</span>
+          <span className="neon-text">Protect Before You Connect.</span>
         </h1>
 
         <p className="mt-6 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed animate-fade-up" style={{ animationDelay: "0.5s" }}>
-          AI-powered blockchain defense infrastructure for Ethereum, Layer 2 ecosystems, DeFi protocols, smart contracts, and next-generation Web3 applications.
+          Aegis Shield is the AI-powered security layer of Aegis Labs, built to protect users, builders, and protocols from on-chain threats before they become real losses.
         </p>
 
-        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up" style={{ animationDelay: "0.5s" }}>
-          <a href="#technology" className="neon-btn rounded-xl px-8 py-4 text-sm tracking-wider">
-            Explore Technology
-          </a>
-          <a href="#dashboard" className="neon-btn-outline rounded-xl px-8 py-4 text-sm tracking-wider">
-            Launch Dashboard
-          </a>
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-4 animate-fade-up" style={{ animationDelay: "0.5s" }}>
+          <Link to="/dashboard" className="neon-btn rounded-xl px-8 py-4 text-sm tracking-wider">
+            Launch Shield
+          </Link>
+          <Link to="/security" className="neon-btn-outline rounded-xl px-8 py-4 text-sm tracking-wider">
+            Scan Contract
+          </Link>
+          <Link to="/technology" className="neon-btn-outline rounded-xl px-8 py-4 text-sm tracking-wider">
+            Explore Security
+          </Link>
         </div>
 
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 animate-fade-up" style={{ animationDelay: "0.9s" }}>

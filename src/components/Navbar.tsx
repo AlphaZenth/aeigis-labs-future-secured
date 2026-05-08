@@ -1,16 +1,19 @@
 import { useState, useEffect } from "react";
+import { Link } from "@tanstack/react-router";
 import logoImg from "@/assets/aeigis-logo.jpg";
 
 const navItems = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Technology", href: "#technology" },
-  { label: "Security", href: "#security" },
-  { label: "Ecosystem", href: "#ecosystem" },
-  { label: "Dashboard", href: "#dashboard" },
-  { label: "Roadmap", href: "#roadmap" },
-  { label: "Contact", href: "#contact" },
-];
+  { label: "Home", to: "/" },
+  { label: "About", to: "/about" },
+  { label: "Technology", to: "/technology" },
+  { label: "Security", to: "/security" },
+  { label: "Ecosystem", to: "/ecosystem" },
+  { label: "Dashboard", to: "/dashboard" },
+  { label: "Roadmap", to: "/roadmap" },
+  { label: "Community", to: "/community" },
+  { label: "FAQ", to: "/faq" },
+  { label: "Contact", to: "/contact" },
+] as const;
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -30,33 +33,35 @@ export default function Navbar() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
-          <a href="#home" className="flex items-center gap-3 group">
-            <img src={logoImg} alt="Aeigis Labs" className="h-10 w-10 rounded-lg" />
+          <Link to="/" className="flex items-center gap-3 group">
+            <img src={logoImg} alt="Aegis Labs" className="h-10 w-10 rounded-lg" />
             <span className="text-lg font-bold tracking-wider text-foreground">
-              AEIGIS <span className="neon-text">LABS</span>
+              AEGIS <span className="neon-text">LABS</span>
             </span>
-          </a>
+          </Link>
 
           <div className="hidden lg:flex items-center gap-1">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.label}
-                href={item.href}
+                to={item.to}
                 className="px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-neon relative group"
+                activeProps={{ className: "px-3 py-2 text-sm text-neon relative group" }}
+                activeOptions={{ exact: true }}
               >
                 {item.label}
                 <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-px bg-neon transition-all duration-300 group-hover:w-full" />
-              </a>
+              </Link>
             ))}
           </div>
 
           <div className="hidden lg:flex items-center gap-3">
-            <a href="#contact" className="neon-btn-outline rounded-lg px-5 py-2.5 text-sm">
+            <Link to="/contact" className="neon-btn-outline rounded-lg px-5 py-2.5 text-sm">
               Contact Team
-            </a>
-            <a href="#dashboard" className="neon-btn rounded-lg px-5 py-2.5 text-sm">
-              Launch App
-            </a>
+            </Link>
+            <Link to="/dashboard" className="neon-btn rounded-lg px-5 py-2.5 text-sm">
+              Launch Shield
+            </Link>
           </div>
 
           <button
@@ -78,18 +83,18 @@ export default function Navbar() {
         <div className="lg:hidden glass-panel border-t border-border">
           <div className="px-4 py-6 space-y-2">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.label}
-                href={item.href}
+                to={item.to}
                 onClick={() => setMobileOpen(false)}
                 className="block px-4 py-3 text-sm text-muted-foreground hover:text-neon rounded-lg hover:bg-accent transition-colors"
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
             <div className="flex flex-col gap-2 pt-4">
-              <a href="#contact" className="neon-btn-outline rounded-lg px-5 py-3 text-sm text-center">Contact Team</a>
-              <a href="#dashboard" className="neon-btn rounded-lg px-5 py-3 text-sm text-center">Launch App</a>
+              <Link to="/contact" className="neon-btn-outline rounded-lg px-5 py-3 text-sm text-center">Contact Team</Link>
+              <Link to="/dashboard" className="neon-btn rounded-lg px-5 py-3 text-sm text-center">Launch Shield</Link>
             </div>
           </div>
         </div>

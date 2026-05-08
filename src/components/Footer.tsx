@@ -1,19 +1,20 @@
+import { Link } from "@tanstack/react-router";
 import logoImg from "@/assets/aeigis-logo.jpg";
 
 const links = [
-  { label: "About", href: "#about" },
-  { label: "Technology", href: "#technology" },
-  { label: "Security", href: "#security" },
-  { label: "Ecosystem", href: "#ecosystem" },
-  { label: "Roadmap", href: "#roadmap" },
-  { label: "Contact", href: "#contact" },
-];
+  { label: "About", to: "/about" },
+  { label: "Technology", to: "/technology" },
+  { label: "Security", to: "/security" },
+  { label: "Ecosystem", to: "/ecosystem" },
+  { label: "Roadmap", to: "/roadmap" },
+  { label: "Contact", to: "/contact" },
+] as const;
 
 const socials = [
-  { label: "X / Twitter", href: "https://twitter.com" },
-  { label: "Telegram", href: "https://t.me" },
-  { label: "GitHub", href: "https://github.com" },
-  { label: "GitBook", href: "https://gitbook.com" },
+  { label: "X / Twitter", href: "https://x.com/AegisLabsEth" },
+  { label: "Telegram", href: "https://t.me/AegisLabsEth" },
+  { label: "GitHub", href: "https://github.com/AegisLabs-Security" },
+  { label: "Whitepaper", href: "/Aegis_Labs_Whitepaper_V0_1.pdf" },
 ];
 
 export default function Footer() {
@@ -24,13 +25,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="md:col-span-1">
             <div className="flex items-center gap-3 mb-4">
-              <img src={logoImg} alt="Aeigis Labs" className="h-10 w-10 rounded-lg" />
+              <img src={logoImg} alt="Aegis Labs" className="h-10 w-10 rounded-lg" />
               <span className="text-lg font-bold tracking-wider">
-                AEIGIS <span className="neon-text">LABS</span>
+                AEGIS <span className="neon-text">LABS</span>
               </span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Building the next-generation defense layer for Ethereum and the decentralized future.
+              Scan Before You Trust. Protect Before You Connect. Building the security layer for Web3.
             </p>
           </div>
 
@@ -39,7 +40,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {links.map((l) => (
                 <li key={l.label}>
-                  <a href={l.href} className="text-sm text-muted-foreground hover:text-neon transition-colors">{l.label}</a>
+                  <Link to={l.to} className="text-sm text-muted-foreground hover:text-neon transition-colors">{l.label}</Link>
                 </li>
               ))}
             </ul>
@@ -61,14 +62,14 @@ export default function Footer() {
             <ul className="space-y-2">
               <li><a href="#" className="text-sm text-muted-foreground hover:text-neon transition-colors">Privacy Policy</a></li>
               <li><a href="#" className="text-sm text-muted-foreground hover:text-neon transition-colors">Terms of Service</a></li>
-              <li><a href="#" className="text-sm text-muted-foreground hover:text-neon transition-colors">Documentation</a></li>
+              <li><a href="/Aegis_Labs_Whitepaper_V0_1.pdf" target="_blank" className="text-sm text-muted-foreground hover:text-neon transition-colors">Whitepaper</a></li>
             </ul>
           </div>
         </div>
 
         <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-muted-foreground">© 2026 Aeigis Labs. All rights reserved.</p>
-          <p className="text-xs text-muted-foreground">Securing The Ethereum Future</p>
+          <p className="text-xs text-muted-foreground">© 2025 Aegis Labs. All rights reserved.</p>
+          <p className="text-xs text-muted-foreground">Scan Before You Trust. Protect Before You Connect.</p>
         </div>
       </div>
     </footer>

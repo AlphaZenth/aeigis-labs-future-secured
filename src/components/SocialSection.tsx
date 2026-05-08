@@ -1,10 +1,10 @@
 import ScrollReveal from "./ScrollReveal";
 
 const socials = [
-  { label: "X / Twitter", href: "https://twitter.com", icon: "𝕏" },
-  { label: "Telegram", href: "https://t.me", icon: "✈" },
-  { label: "GitHub", href: "https://github.com", icon: "⌨" },
-  { label: "GitBook", href: "https://gitbook.com", icon: "📖" },
+  { label: "X / Twitter", href: "https://x.com/AegisLabsEth", icon: "𝕏" },
+  { label: "Telegram", href: "https://t.me/AegisLabsEth", icon: "✈" },
+  { label: "GitHub", href: "https://github.com/AegisLabs-Security", icon: "⌨" },
+  { label: "Whitepaper", href: "/Aegis_Labs_Whitepaper_V0_1.pdf", icon: "📄" },
 ];
 
 export default function SocialSection() {
@@ -14,7 +14,10 @@ export default function SocialSection() {
         <ScrollReveal>
           <div className="text-center mb-8">
             <p className="text-xs tracking-widest text-neon uppercase mb-3">Community</p>
-            <h2 className="text-2xl font-bold">Join The Network</h2>
+            <h2 className="text-2xl font-bold">Join The Shield</h2>
+            <p className="mt-2 text-muted-foreground text-sm max-w-lg mx-auto">
+              Aegis Shield is not just a product. It is a movement to make Web3 safer. Join users, builders, researchers, and security contributors.
+            </p>
           </div>
         </ScrollReveal>
 
