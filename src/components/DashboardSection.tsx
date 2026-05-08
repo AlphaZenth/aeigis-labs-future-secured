@@ -32,7 +32,7 @@ export default function DashboardSection() {
                 <div className="h-3 w-3 rounded-full bg-green-500 animate-pulse" />
                 <span className="text-xs text-muted-foreground tracking-wider uppercase">All Systems Operational</span>
               </div>
-              <span className="text-xs text-muted-foreground font-mono">AEIGIS-CORE v3.2.1</span>
+              <span className="text-xs text-muted-foreground font-mono">AEGIS-SHIELD v1.0.0</span>
             </div>
 
             {/* Metrics */}
