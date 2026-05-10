@@ -28,7 +28,7 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <div className="relative min-h-screen bg-background">
-      <ParticleField />
+      <LoadingScreen />
       <Navbar />
       <main className="relative z-10">
         <HeroSection />
