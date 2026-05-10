@@ -5,6 +5,7 @@ import TrustSection from "@/components/TrustSection";
 import SocialSection from "@/components/SocialSection";
 import Footer from "@/components/Footer";
 import ParticleField from "@/components/ParticleField";
+import LoadingScreen from "@/components/LoadingScreen";
 
 export const Route = createFileRoute("/")({
   component: Index,
